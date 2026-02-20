@@ -1,0 +1,42 @@
+---
+title: "607_project_1_approach"
+author: "Ony"
+date: "2026-02-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r}
+library(tidyverse)
+library(dplyr)
+library(gt)
+```
+
+
+There are two potential methods to explore:
+
+1. Importing the txt file into a dataframe using a specific delineator ("|" or width), then extract values from the dataframe into a table. 
+
+```{r}
+
+
+
+delim <- read_delim("https://raw.githubusercontent.com/ifi-ony/607_Project_1/refs/heads/main/tournamentinfo.txt", delim = "|")
+
+lines <- read_lines("https://raw.githubusercontent.com/ifi-ony/607_Project_1/refs/heads/main/tournamentinfo.txt")
+
+linef <- data.frame(lines)
+
+
+```
+
+
+2. Processing the data in the import itself by searching using recurring patterns in the data within the import statement (potentially using grep command).
+
+```{r}
+
+```
